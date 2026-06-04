@@ -11,7 +11,7 @@ function makeDraggable(el) {
     activeBox = el;
     offsetX = e.clientX - el.getBoundingClientRect().left;
     offsetY = e.clientY - el.getBoundingClientRect().top;
-    document.querySelectorAll('.popup').forEach(p => p.style.zIndex = "8");
+    document.querySelectorAll('.popup').forEach(p => p.style.zIndex = "6");
     activeBox.style.zIndex = "10";
   });
 }
@@ -28,8 +28,8 @@ function makePopup(opsiId, popupId, exitId) {
     popup.style.display = 'block';
     const mainRect = document.getElementById('main').getBoundingClientRect();
     popup.style.display = 'block';
-    popup.style.left = (e.clientX - mainRect.left) + 'px';
-    popup.style.top  = (e.clientY - mainRect.top) + 'px';
+    popup.style.left = (e.clientX - mainRect.left - 200) + 'px';
+    popup.style.top = (e.clientY - mainRect.top - 200) + 'px';
   });
 
   exit.addEventListener('click', function() {
@@ -55,3 +55,11 @@ makePopup("opsi1", "popup1", "exit1");
 makePopup("opsi2", "popup2", "exit2");
 makePopup("opsi3", "popup3", "exit3");
 makePopup("opsi4", "popup4", "exit4");
+makePopup("opsi5", "popup5", "exit5");
+makePopup("opsi6", "popup6", "exit6");
+makePopup("opsi7", "popup7", "exit7");
+makePopup("opsi8", "popup8", "exit8");
+makePopup("opsi9", "popup9", "exit9");
+
+
+
